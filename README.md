@@ -37,6 +37,8 @@ Some papers to reference the model from:
 5. https://ismir2013.ismir.net/wp-content/uploads/2013/09/243_Paper.pdf
 6. https://ieeexplore.ieee.org/abstract/document/7738895?casa_token=AsXqhmXafx8AAAAA:WpMlyNZeF78m3_YHIXm7XkVhP3HAbkZr-5ksJN2waLlXzE7FlimAA2DWDAJbAEHa_QrZKTFPOw
 7. https://ieeexplore.ieee.org/abstract/document/8523662?casa_token=yq_8-_722icAAAAA:RPQpKZMGXdPIynDRWBJ4TyMOocaPRa_Q1EFdEE1XttZb4q2d8nPoyY-YY8x6uo-sPu0JE3IVXw 
+8. https://www.kaggle.com/code/davidbroberts/chord-progression-maker/notebook
+
 
 
 I will read these papers to get an idea of a good system
@@ -48,7 +50,9 @@ Additional Reading:
 Development will need to happen in a few stages so that I have real results to show in the presentation. The stages will be as follows:
 
 1. Do a CNN for just the chord recognition - on the separated chords from jazznet to demonstrate
-    - Preprocessing idea: extract the 4 most prominent frequencies from the CQT of the chord and their respective magnitudes
-    - 
+    - Preprocessing idea: extract the most prominent frequencies from the CQT of the chord and their respective magnitudes
+    - rearrange them, and extract the differences between them
+    - add these into the training dataframe
+    - train the model with and without the spectograms
 2. Try to do a RNN or a CRF on the chord sequence
 3. Try a combined model
