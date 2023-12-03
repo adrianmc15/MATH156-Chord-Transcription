@@ -49,10 +49,27 @@ Additional Reading:
 ## Stages of Development
 Development will need to happen in a few stages so that I have real results to show in the presentation. The stages will be as follows:
 
-1. Do a CNN for just the chord recognition - on the separated chords from jazznet to demonstrate
-    - Preprocessing idea: extract the most prominent frequencies from the CQT of the chord and their respective magnitudes
-    - rearrange them, and extract the differences between them
-    - add these into the training dataframe
-    - train the model with and without the spectograms
+Edit (2 Dec): goals have been changed slighty: just to explore chord recognition with CNN + signal processing (maybe compare different methods)
+
+#### Attempt 1: Exploration
+Plan:
+Do a CNN for just the chord recognition - on the separated chords from jazznet to demonstrate
+-  Preprocessing idea: extract the most prominent frequencies from the CQT of the chord and their respective magnitudes
+- rearrange them, and extract the differences between them
+- add these into the training dataframe
+- train the model with and without the spectograms
+
+Results:
+- the model for the manual chord extraction didn't work super well
+- the pure CNN on the spectograms didn't work super well. Now going to attempt a slightly different approach, based on some papers online
+
+#### Attempt 2: Building blocks
+Plan:
+- start with just major/minor model similar to kaggle
+- try to expand to diminished and augmented
+
+
+#### (Not in plan any more)
+
 2. Try to do a RNN or a CRF on the chord sequence
 3. Try a combined model
