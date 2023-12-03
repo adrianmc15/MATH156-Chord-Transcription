@@ -51,7 +51,7 @@ Development will need to happen in a few stages so that I have real results to s
 
 Edit (2 Dec): goals have been changed slighty: just to explore chord recognition with CNN + signal processing (maybe compare different methods)
 
-#### Attempt 1: Exploration
+#### Stage 1: Exploration
 Plan:
 Do a CNN for just the chord recognition - on the separated chords from jazznet to demonstrate
 -  Preprocessing idea: extract the most prominent frequencies from the CQT of the chord and their respective magnitudes
@@ -63,11 +63,18 @@ Results:
 - the model for the manual chord extraction didn't work super well
 - the pure CNN on the spectograms didn't work super well. Now going to attempt a slightly different approach, based on some papers online
 
-#### Attempt 2: Building blocks
+#### Stage 2: Manual Chord Classification
 Plan:
 - start with just major/minor model similar to kaggle
 - try to expand to diminished and augmented
 
+Results:
+- this was quite successful, the results were something like 72% for root notes and 87% overall for chord quality
+
+#### Stage 3: CNN to improve this
+Plan:
+- start with a CNN that just does chord qualities, then use the results to figure out the root note (maybe use another ML model for this)
+- do this by getting the frequency bin info and filling that as input (using cnn or even something else, like a clustering algorithm - experiment with a few different models) -> try an ensemble even, or different ones for chord qualities and root notes
 
 #### (Not in plan any more)
 
