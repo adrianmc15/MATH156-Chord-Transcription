@@ -75,6 +75,7 @@ Results:
 Plan:
 - start with a CNN that just does chord qualities, then use the results to figure out the root note (maybe use another ML model for this)
 - do this by getting the frequency bin info and filling that as input (using cnn or even something else, like a clustering algorithm - experiment with a few different models) -> try an ensemble even, or different ones for chord qualities and root notes
+- Try to use top notes as input data in a KNN, RF etc.
 
 #### (Not in plan any more)
 
